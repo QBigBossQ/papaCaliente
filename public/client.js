@@ -176,24 +176,24 @@
     socket.on("connect", () => {
       disableTButton();
       disableRButton();
-      setMessage("Waiting for opponent...");
+      setMessage("Esperando oponente...");
     });
 
     socket.on("disconnect", () => {
       disableTButton();
       disableRButton();
       hideScore();
-      setMessage("Connection lost!");
+      setMessage("Conexion perdida!");
     });
 
     socket.on("error", () => {
       disableTButton();
       disableRButton();
-      setMessage("Connection error!");
+      setMessage("Error de conexion!");
     });
 
     socket.on("throw", () => {
-      setMessage("Bomb in the air!");
+      setMessage("Bomba en el aire!");
     });
 
     bThrow.addEventListener("click", function(e) {
