@@ -78,7 +78,7 @@
       const pointsCount = points.win + points.lose;
 
       if (pointsCount === 0) {
-        setMessage("Get ready!");
+        setMessage("Preparate!");
       }
       enableRButton();
     });
@@ -88,7 +88,7 @@
       if (bombOwner) {
         isBombOwner = bombOwner;
       }
-      setMessage("Waiting for opponent to get ready...");
+      setMessage("Esperando a que el oponente este listo...");
       disableRButton();
       hideScore();
       updateCountdown(10);
@@ -106,7 +106,7 @@
       opponentReady = true;
       hideScore();
       if (!isBombOwner) {
-        setMessage("Get ready!");
+        setMessage("Preparate!");
       }
       if (ready && opponentReady) {
         setMessage("");
@@ -126,7 +126,7 @@
         setMessage("");
       } else {
         disableTButton();
-        setMessage("Prepare to catch!");
+        setMessage("Preparate para agarrarla!");
       }
     });
 
@@ -137,7 +137,7 @@
       isBombOwner = false;
       setMessage("");
       resetCountdown();
-      displayScore("You win!");
+      displayScore("Ganaste!");
       enableRButton();
       disableTButton();
     });
@@ -149,7 +149,7 @@
       isBombOwner = false;
       setMessage("");
       resetCountdown();
-      displayScore("You lose!");
+      displayScore("Perdiste!");
       enableRButton();
       disableTButton();
     });
@@ -158,7 +158,7 @@
       disableTButton();
       disableRButton();
       hideScore();
-      setMessage("Waiting for opponent...");
+      setMessage("Esperando oponente...");
     });
 
     socket.on("tick", time => {
